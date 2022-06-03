@@ -232,7 +232,7 @@ $mpdf = new mPDF('utf-8', 'A4-L');
 
 $mpdf->setFooter('Page {PAGENO} of {nb} DP/5.10.4/Balai KIPM JKT I;Rev 4;25 Januari 2019');
 $mpdf->WriteHTML(utf8_encode($html));
-$mpdf->Output($nama_dokumen . ".pdf", 'I');
+$mpdf->Output("rekap_penilaian.pdf", 'I');
 exit;
 
 ?>

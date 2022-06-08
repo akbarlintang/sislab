@@ -122,4 +122,27 @@ class Penilaian_model extends CI_Model
             return false;
         }
     }
+
+    function getHasil($row_id, $id_kd_lokal)
+    {
+        return $this->db->query("SELECT * FROM tbl_nilai LEFT JOIN tb_r_panelis ON tbl_nilai.panelis_id = tb_r_panelis.id WHERE permohonan_id =" .$row_id. " AND id_kd_lokal =" .$id_kd_lokal);
+    }
+
+    function insertHasil($row_id, $id_kd_lokal, $hasil_uji)
+    {
+        $this->db->trans_start();
+        $this->db->where('row_id', $row_id);
+        $this->db->where('id_kd_lokal', $id_kd_lokal);
+        $this->db->update('dtl_hasil_uji', $hasil_uji);
+
+        $updated_row = $this->db->affected_rows();
+
+        $this->db->trans_complete();
+        
+        if($updated_row > 0){
+            return $row_id;
+        } else {
+            return false;
+        }
+    }
 }

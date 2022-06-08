@@ -36,7 +36,7 @@
             <!-- left column -->
             <div class="col-md-12">
               <!-- general form elements -->
-                <div class="box box-primary">
+                <div class="box box-primary" style="padding: 30px 0;">
                     <div class="box-header text-center">
                         <h3 class="box-title text-bold"><?php echo set_value('fdeskripsicth'); ?> LAPORAN HASIL UJI SEMENTARA (LHUS)</h3>
                         <h4 class="text-bold">No : <?php echo($detail[0]->no_fppc) ?></h4>
@@ -141,16 +141,22 @@
                                 <td style="width: 1%;">:</td>
                                 <td>P (<?php echo($pmin) ?> < u < <?php echo($pmax) ?>)</td>
                               </tr>
-                              <!-- <tr>
+                              <tr>
                                 <td>Kesimpulan</td>
                                 <td>:</td>
-                                <td>Nilai skor organoleptik 8,0</td>
+                                <td>Nilai skor organoleptik <strong><?php echo($total_rata) ?></strong></td>
                               </tr>
                               <tr>
                                 <td></td>
                                 <td></td>
-                                <td>Memenuhi Standar Interval Mutu Kesegaran</td>
-                              </tr> -->
+                                <?php
+                                  if ($total_rata < 7) {
+                                    echo('<td>Tidak Memenuhi Standar Interval Mutu Kesegaran</td>');
+                                  } else {
+                                    echo('<td>Memenuhi Standar Interval Mutu Kesegaran</td>');
+                                  }
+                                ?>
+                              </tr>
                             </table>
                           </div>
                         </div>

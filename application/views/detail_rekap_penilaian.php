@@ -20,7 +20,6 @@
               <tr>
                 <th>Kode Ikan</th>
                 <th>Ikan</th>
-                <th>Kode Pelanggan </th>
                 <th>Kode Sampel</th>
                 <th>Kode Uji</th>
                 <th>Keterangan Uji</th>
@@ -41,7 +40,6 @@
 
                     <td><?php echo $record->id_kd_lokal ?></td>
                     <td><?php echo $record->nm_lokal ?></td>
-                    <td><?php echo $record->kode_pelanggan ?></td>
 
                     <td><?php echo $record->kode_sampel ?></td>
                     <td><?php echo $record->kode_uji ?></td>

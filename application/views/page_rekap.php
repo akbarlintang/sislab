@@ -172,8 +172,13 @@ echo '
             
             ';
 
-            $pmin = number_format((float)($total_rata - ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');;
-            $pmax = number_format((float)($total_rata + ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');;
+            $pmin = number_format((float)($total_rata - ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');
+            $pmax = number_format((float)($total_rata + ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');
+            if ($total_rata < 7) {
+                $kesimpulan = 'Tidak Memenuhi Standar Interval Mutu Kesegaran';
+            } else {
+                $kesimpulan = 'Memenuhi Standar Interval Mutu Kesegaran';
+            }
 
             echo '
             <div style="margin: 20px 0;">
@@ -183,16 +188,16 @@ echo '
                         <td style="width: 1%;">:</td>
                         <td>P ('. $pmin .' < u < '. $pmax .')</td>
                     </tr>
-                    <!-- <tr>
+                    <tr>
                         <td>Kesimpulan</td>
                         <td>:</td>
-                        <td>Nilai skor organoleptik 8,0</td>
+                        <td>Nilai skor organoleptik <strong>'. $total_rata .'</strong></td>
                     </tr>
                     <tr>
                         <td></td>
                         <td></td>
-                        <td>Memenuhi Standar Interval Mutu Kesegaran</td>
-                    </tr> -->
+                        <td>'. $kesimpulan .'</td>
+                    </tr>
                 </table>
             </div>
 

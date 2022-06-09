@@ -113,6 +113,28 @@ class Penilaian extends BaseController
                 $result = $this->Penilaian_model->tambahNilaiBaru($nilai);
             }
 
+            // Update hasil akhir
+            $data['penilaian'] = $this->Penilaian_model->getHasil($row_id, $id_kd_lokal)->result_object();
+            $avg_val = [];
+            foreach ($data['penilaian'] as $val) {
+                $par = array($val->mata, $val->insang, $val->lendir, $val->daging, $val->bau, $val->tekstur);
+                // Rata-rata per row
+                $count = count($par);
+                $avg = number_format((float)(array_sum($par) / $count), 2, '.', '');
+                array_push($avg_val, $avg);
+            }
+
+            // Hitung hasil akhir (Total rata-rata dibagi jumlah penilaian)
+            $hasil = array_sum($avg_val) / count($data['penilaian']);
+            $hasil = number_format((float)($hasil), 2, '.', '');
+            
+            $hasil_uji = array(
+                'hasil_uji' => $hasil,
+            );
+
+            // Insert hasil akhir ke tabel dtl_hasil_uji
+            $cekHasil = $this->Penilaian_model->insertHasil($row_id, $id_kd_lokal, $hasil_uji);
+
             if ($result > 0) {
                 $this->session->set_flashdata('success', 'Nilai Baru Berhasil Ditambahkan');
             } else {

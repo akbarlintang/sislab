@@ -160,12 +160,12 @@
 
               </ul>
             </li>
-            <!-- <li>
+            <li>
               <a href="<?php echo base_url(); ?>Laporanuji">
                 <i class="fa fa-ticket"></i>
                 <span>Laporan Hasil Uji</span>
               </a>
-            </li> -->
+            </li>
             <!-- <li>
               <a href="<?php echo base_url(); ?>SKHS" >
                 <i class="fa fa-ticket"></i>

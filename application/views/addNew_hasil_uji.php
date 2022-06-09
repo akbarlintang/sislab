@@ -68,7 +68,7 @@
                                     </div>
                                   <div class="form-group">
                                         <label for="fname">Hasil Uji</label>
-                                        <input type="text" class="form-control required" value="<?php echo set_value('fhasil_uji'); ?>" id="fhasil_uji" name="fhasil_uji" maxlength="128">
+                                        <input type="text" class="form-control required" value="<?php echo set_value('fhasil_uji',$hasil_uji); ?>" id="fhasil_uji" name="fhasil_uji" maxlength="128">
                                     </div>
                                    
                                     <div class="form-group">

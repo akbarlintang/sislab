@@ -62,6 +62,11 @@ class Laporanuji extends BaseController
             $data['row_id'] = $row_id;
 
             $data['parameter_uji']   = $kode_uji;
+
+            $detail_uji = $this->db->query("SELECT * FROM dtl_hasil_uji WHERE row_id =" . $row_id . "AND id_kd_lokal =" . $id_kd_lokal . "")->result_object();
+            $data['hasil_uji'] = $detail_uji[0]->hasil_uji;
+            // return var_dump($detail_uji[0]->hasil_uji);
+
             $this->global['pageTitle'] = 'Sislab : Add Hasil Uji';
             $this->loadViews("addNew_hasil_uji", $this->global, $data, NULL);
         }

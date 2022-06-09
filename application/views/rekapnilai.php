@@ -46,7 +46,7 @@
                     <td> <?php echo $row->no_ppk ?></td>
 
                     <td class="text-center">
-                      <a class="btn btn-sm btn-warning" href="<?php echo base_url() . 'Laporanuji/addNew_Form_LHU/' . $row->row_id; ?>" title="Tambah no & tanggal LHU"><i class="fa fa-plus"></i></a>
+                      <!-- <a class="btn btn-sm btn-warning" href="<?php echo base_url() . 'Laporanuji/addNew_Form_LHU/' . $row->row_id; ?>" title="Tambah no & tanggal LHU"><i class="fa fa-plus"></i></a> -->
 
                       <a class="btn btn-sm btn-info" href="<?php echo base_url() . 'RekapNilai/detail_rekap_penilaian/' . $row->row_id; ?>" title="Lihat Detail LHU"><i class="fa fa-search"></i></a>
 

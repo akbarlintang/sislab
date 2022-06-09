@@ -4,7 +4,7 @@
 error_reporting(0);
 
 $timezone = "Asia/Jakarta";
-if (function_exists(date_default_timezone_set)) date_default_timezone_set($timezone);
+//if (function_exists(date_default_timezone_set)) date_default_timezone_set($timezone);
 
 $tanggalttd = $tr_mst_fppc[0]['tgl_lhu'];
 $tanggalttd = date("d M Y", strtotime($tanggalttd));
@@ -71,9 +71,9 @@ echo '
         <hr width="50%" align="center" border-style="double">
         <br>
 
-        <div align="right" style="font-size: 10px">'. $tr_mst_fppc[0]['no_fppc'] .'</div>
+        <div align="right" style="font-size: 10px">' . $tr_mst_fppc[0]['no_fppc'] . '</div>
         <div align=center style="font-size: 14px; font-weight: bold;"><u>LAPORAN HASIL UJI SEMENTARA (LHUS)</u></div>
-        <div align=center style="font-size: 14px; font-weight: bold;">No : '. $tr_mst_fppc[0]['no_lhu'] .'</div>
+        <div align=center style="font-size: 14px; font-weight: bold;">No : ' . $tr_mst_fppc[0]['no_lhu'] . '</div>
         <br>
 
         <table border=0  width="100%" cellspacing="0" cellpadding="6" >
@@ -83,11 +83,11 @@ echo '
             </tr>
             <tr>
                 <td valign="top" width="20%">No. Contoh Uji</td>
-                <td valign="top"width="10%">: '. $tr_mst_fppc[0]['no_lhu'] .'</td>
+                <td valign="top"width="10%">: ' . $tr_mst_fppc[0]['no_lhu'] . '</td>
             </tr>
             <tr>
                 <td valign="top" width="20%">Tanggal Pengujian</td>
-                <td valign="top"width="10%">: '. $tanggalttd .'</td>
+                <td valign="top"width="10%">: ' . $tanggalttd . '</td>
             </tr>
             <tr>
                 <td valign="top" width="20%">Hasil Pengujian</td>
@@ -115,22 +115,22 @@ echo '
                     <th>Tekstur</th>
                 </tr> 
             </thead>';
-                $no = 1;
-                $totalAvg = 0;
-                $loop = 0;
+$no = 1;
+$totalAvg = 0;
+$loop = 0;
 
-                foreach ($penilaian as $nilai) {
-                    $x = count($penilaian);
-                    $xxi = number_format((float)($avg_val[$no-1] - $total_rata), 2, '.', '');
-                    $xxi2 = number_format((float)(($xxi) * ($xxi)), 2, '.', '');
-                    $totalXxi2 += $xxi2;
-                    $s = number_format((float)($totalXxi2 / $x), 2, '.', '');
-                    $sd = number_format((float)(sqrt($s)), 2, '.', '');
+foreach ($penilaian as $nilai) {
+    $x = count($penilaian);
+    $xxi = number_format((float)($avg_val[$no - 1] - $total_rata), 2, '.', '');
+    $xxi2 = number_format((float)(($xxi) * ($xxi)), 2, '.', '');
+    $totalXxi2 += $xxi2;
+    $s = number_format((float)($totalXxi2 / $x), 2, '.', '');
+    $sd = number_format((float)(sqrt($s)), 2, '.', '');
 
-                    echo '
+    echo '
                     <tr>
                         <td align=center>' . $no . '</td>
-                        <td>'. $nilai->nama .'</td>
+                        <td>' . $nilai->nama . '</td>
                         <td align=center>' . $nilai->mata . '</td>
                         <td align=center>' . $nilai->insang . '</td>
                         <td align=center>' . $nilai->lendir . '</td>
@@ -138,50 +138,50 @@ echo '
                         <td align=center>' . $nilai->bau . '</td>
                         <td align=center>' . $nilai->tekstur . '</td>
 
-                        <td align=center>' . $sum_val[$no-1] . '</td>
-                        <td align=center>' . $avg_val[$no-1] . '</td>
+                        <td align=center>' . $sum_val[$no - 1] . '</td>
+                        <td align=center>' . $avg_val[$no - 1] . '</td>
                         <td align=right>' . $xxi . '</td>
                         <td align=right>' . $xxi2 . '</td>
                     </tr>
                     ';
-                    $no++;
-                };
+    $no++;
+};
 
 
 
-            echo '
+echo '
                 <tr>
                     <td colspan="9"></td>
-                    <td align=center>'. array_sum($avg_val) .'</td>
+                    <td align=center>' . array_sum($avg_val) . '</td>
                     <th>Rata-rata</th>
-                    <td align=right>'. $totalXxi2 .'</td>
+                    <td align=right>' . $totalXxi2 . '</td>
                 </tr>
                 <tr>
                     <td colspan="8"></td>
                     <th>Xi</th>
-                    <td align=center>'. $total_rata .'</td>
+                    <td align=center>' . $total_rata . '</td>
                     <th>S</th>
-                    <td align=right>'. $s .'</td>
+                    <td align=right>' . $s . '</td>
                 </tr>
                 <tr>
                     <td colspan="10"></td>
                     <th>SD</th>
-                    <td align=right>'. $s .'</td>
+                    <td align=right>' . $s . '</td>
                 </tr>
             </table>
             
             ';
 
-            $pmin = number_format((float)($total_rata - ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');;
-            $pmax = number_format((float)($total_rata + ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');;
+$pmin = number_format((float)($total_rata - ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');;
+$pmax = number_format((float)($total_rata + ((1.96 * $sd) / (sqrt(9)))), 2, '.', '');;
 
-            echo '
+echo '
             <div style="margin: 20px 0;">
                 <table style="width: 100%;">
                         <tr>
                         <td style="width: 9%;">Hasil Akhir</td>
                         <td style="width: 1%;">:</td>
-                        <td>P ('. $pmin .' < u < '. $pmax .')</td>
+                        <td>P (' . $pmin . ' < u < ' . $pmax . ')</td>
                     </tr>
                     <!-- <tr>
                         <td>Kesimpulan</td>

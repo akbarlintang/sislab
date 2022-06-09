@@ -153,8 +153,8 @@
                 <li><a href="<?php echo base_url(); ?>pegawai/daftarPegawai"><i class="fa fa-circle-o"></i>Pegawai</a></li>
                 <li><a href="<?php echo base_url(); ?>panelis/daftarPanelis"><i class="fa fa-circle-o"></i>Panelis</a></li>
                 <li><a href="<?php echo base_url(); ?>organoleptik/daftarOrganoleptik"><i class="fa fa-circle-o"></i>Organoleptik</a></li>
-                <li><a href="<?php echo base_url(); ?>laporan_hasil"><i class="fa fa-circle-o"></i>LHUS</a></li>
-                <li><a href="<?php echo base_url(); ?>ikan/daftarIkan"><i class="fa fa-circle-o"></i>Ikan</a></li>
+                <!--<li><a href="<?php echo base_url(); ?>laporan_hasil"><i class="fa fa-circle-o"></i>LHUS</a></li>
+                <li><a href="<?php echo base_url(); ?>ikan/daftarIkan"><i class="fa fa-circle-o"></i>Ikan</a></li> -->
                 <li><a href="<?php echo base_url(); ?>kode_asal/daftarKode_asal"><i class="fa fa-circle-o"></i>Kode Asal Sampel</a></li>
                 <li><a href="<?php echo base_url(); ?>permintaan_uji/daftarPermintaan_uji"><i class="fa fa-circle-o"></i>Permintaan Uji</a></li>
 

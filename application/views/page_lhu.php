@@ -52,7 +52,7 @@ echo '
     <tr><td >
     </td>
     <td></td>
-    <td align=center  style="font-size:14px;"><img src="img/logokkp.jpg" alt="HTML5 Icon" style="width:70px;height:70px;">
+    <td align=center  style="font-size:14px;"><img src="assets/kkp.png" alt="HTML5 Icon" style="width:70px;height:70px;">
 </td>
     </tr>
   

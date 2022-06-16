@@ -62,7 +62,7 @@
                     <div class="box-body table-responsive no-padding">
                         <table class="table table-hover">
                             <tr>
-                                <th width="1%">Panelis</th>
+                                <!--th width="1%">Panelis</th-->
                                 <th width="1%">NIP Baru</th>
                                 <th width="1%">NIP</th>
                                 <th width="5%">Nama</th>
@@ -85,7 +85,7 @@
                                 foreach ($userRecords as $record) {
                             ?>
                                     <tr>
-                                        <td><?php echo $record->panelis ?></td>
+                                        <!--td><?php echo $record->panelis ?></td-->
                                         <td><?php echo $record->nip_baru ?></td>
                                         <td><?php echo $record->nip ?></td>
                                         <td><?php echo $record->nama ?></td>

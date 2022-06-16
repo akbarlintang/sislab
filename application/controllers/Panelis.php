@@ -111,7 +111,7 @@ class Panelis extends BaseController
             $this->form_validation->set_rules('nip_baru', 'NIP Baru', 'trim|required|max_length[18]');
             $this->form_validation->set_rules('nip', 'NIP', 'trim|required|max_length[10]');
             $this->form_validation->set_rules('status', 'Status', 'trim|required|max_length[10]');
-            $this->form_validation->set_rules('panelis', 'Panelis', 'trim|required|max_length[128]');
+            //$this->form_validation->set_rules('panelis', 'Panelis', 'trim|required|max_length[128]');
             $this->form_validation->set_rules('alamat', 'Alamat Lengkap', 'trim|required|max_length[128]');
             $this->form_validation->set_rules('id_jabatan', 'ID Jabatan', 'trim|required|max_length[10]');
             $this->form_validation->set_rules('id_jenjang', 'ID Jenjang', 'trim|required|max_length[10]');
@@ -268,22 +268,22 @@ class Panelis extends BaseController
             $this->form_validation->set_rules('nip_baru', 'NIP Baru', 'required');
             $this->form_validation->set_rules('nip', 'NIP', 'required');
             $this->form_validation->set_rules('nama', 'Nama Lengkap', 'trim|required|max_length[128]');
-            $this->form_validation->set_rules('panelis', 'Panelis', 'required');
+            $this->form_validation->set_rules('panelis', 'Panelis');
             $this->form_validation->set_rules('alamat', 'Alamat Lengkap', 'trim|required|max_length[128]');
             $this->form_validation->set_rules('id_jabatan', 'ID Jabatan', 'required');
             $this->form_validation->set_rules('id_jenjang', 'ID Jenjang', 'required');
             $this->form_validation->set_rules('kd_gol', 'Kd Gol', 'required');
             $this->form_validation->set_rules('kd_upt', 'Kd UPT', 'required');
             $this->form_validation->set_rules('keterangan', 'Keterangan');
-            $this->form_validation->set_rules('st_panelis', 'St Panelis', 'required');
+            $this->form_validation->set_rules('st_panelis', 'St Panelis');
             $this->form_validation->set_rules('pangkat_tmt', 'Perangkat TMT', 'required');
             $this->form_validation->set_rules('periode_ak_tmt', 'Periode', 'required');
             $this->form_validation->set_rules('awal_ak', 'Awal', 'required');
             $this->form_validation->set_rules('tplhr', 'TPL', 'required');
             $this->form_validation->set_rules('tglhr', 'TGL', 'required');
             $this->form_validation->set_rules('tgl_berlaku', 'Tanggal Berlaku', 'required');
-            $this->form_validation->set_rules('status', 'Status', 'required');
-            $this->form_validation->set_rules('sts_sync', 'STS Sync', 'required');
+            $this->form_validation->set_rules('status', 'Status');
+            $this->form_validation->set_rules('sts_sync', 'STS Sync');
 
             if ($this->form_validation->run() == FALSE) {
                 $this->editPanelisLama($nip_baru);

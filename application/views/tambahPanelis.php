@@ -50,10 +50,16 @@
                                 </div>
                                 <div class="col-md-6">
                                     <div class="form-group">
+                                        <label for="alamat">Alamat</label>
+                                        <input type="text" class="form-control" id="alamat" placeholder="Alamat" name="alamat" value="<?php echo set_value('alamat'); ?>" maxlength="128">
+                                    </div>
+                                </div>
+                                <!--div class="col-md-6">
+                                    <div class="form-group">
                                         <label for="panelis">Status Panelis</label>
                                         <input type="text" class="form-control" id="panelis" placeholder="Ya atau Tidak" name="panelis" value="<?php echo set_value('panelis'); ?>" maxlength="128">
                                     </div>
-                                </div>
+                                </div-->
                             </div>
 
                             <div class="row">
@@ -72,14 +78,6 @@
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-12">
-                                    <div class="form-group">
-                                        <label for="alamat">Alamat</label>
-                                        <input type="text" class="form-control" id="alamat" placeholder="Alamat" name="alamat" value="<?php echo set_value('alamat'); ?>" maxlength="128">
-                                    </div>
-                                </div>
-                            </div>
 
                             <div class="row">
                                 <div class="col-md-6">

@@ -21,7 +21,7 @@ class Organoleptik_model extends CI_Model
         if (!empty($searchText)) {
             $likeCriteria = "(BaseTbl.jenis_pemeriksaan  LIKE '%" . $searchText . "%'
                             OR  BaseTbl.organ_diperiksa  LIKE '%" . $searchText . "%'
-                            OR  BaseTbl.gejela_klinis  LIKE '%" . $searchText . "%')";
+                            OR  BaseTbl.gejala_klinis  LIKE '%" . $searchText . "%')";
             $this->db->where($likeCriteria);
         }
         $query = $this->db->get();
@@ -43,8 +43,11 @@ class Organoleptik_model extends CI_Model
         if (!empty($searchText)) {
             $likeCriteria = "(BaseTbl.jenis_pemeriksaan  LIKE '%" . $searchText . "%'
             OR  BaseTbl.organ_diperiksa  LIKE '%" . $searchText . "%'
-            OR  BaseTbl.gejela_klinis  LIKE '%" . $searchText . "%'
-                            )";
+            OR  BaseTbl.gejala_klinis  LIKE '%" . $searchText . "%'
+            OR  BaseTbl.kode  LIKE '%" . $searchText . "%'
+            OR  BaseTbl.nilai  LIKE '%" . $searchText . "%'
+
+            )";
             $this->db->where($likeCriteria);
         }
         $this->db->order_by('BaseTbl.kode', 'ASC');

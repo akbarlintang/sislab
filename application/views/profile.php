@@ -68,7 +68,7 @@ $role = $userInfo->role;
                                         <div class="col-md-12">
                                             <div class="form-group">
                                                 <label for="mobile">Nomor Telepon</label>
-                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="<?php echo $mobile; ?>" value="<?php echo set_value('mobile', $mobile); ?>" maxlength="10">
+                                                <input type="text" class="form-control" id="mobile" name="mobile" placeholder="<?php echo $mobile; ?>" value="<?php echo set_value('mobile', $mobile); ?>" maxlength="13">
                                             </div>
                                         </div>
                                     </div>

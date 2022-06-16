@@ -118,15 +118,15 @@ class Panelis extends BaseController
             $this->form_validation->set_rules('kd_gol', 'Kd Gol', 'trim|required|max_length[10]');
             $this->form_validation->set_rules('kd_upt', 'Kd UPT', 'trim|required|max_length[10]');
             $this->form_validation->set_rules('keterangan', 'Keterangan');
-            $this->form_validation->set_rules('st_panelis', 'St Panelis', 'trim|required|max_length[10]');
+           // $this->form_validation->set_rules('st_panelis', 'St Panelis', 'trim|required|max_length[10]');
             $this->form_validation->set_rules('pangkat_tmt', 'Perangkat TMT');
             $this->form_validation->set_rules('periode_ak_tmt', 'Periode');
             $this->form_validation->set_rules('awal_ak', 'Awal', 'trim|required|max_length[10]');
             $this->form_validation->set_rules('tplhr', 'TPL', 'trim|required|max_length[10]');
             $this->form_validation->set_rules('tglhr', 'TGL');
             $this->form_validation->set_rules('tgl_berlaku', 'Tanggal Berlaku');
-            $this->form_validation->set_rules('status', 'Status', 'trim|required|max_length[10]');
-            $this->form_validation->set_rules('sts_sync', 'STS Sync', 'trim|required|max_length[10]');
+            $this->form_validation->set_rules('status', 'Status', 'trim|max_length[10]');
+            $this->form_validation->set_rules('sts_sync', 'STS Sync', 'trim|max_length[10]');
 
             $this->form_validation->set_rules('email', 'Email', 'trim|required|max_length[128]');
             $this->form_validation->set_rules('no_telp', 'Nomor Telepon', 'required|min_length[10]');

@@ -107,20 +107,20 @@ $sts_sync = $infoPanelis->sts_sync;
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="kd_gol">Kd Gol</label>
-                                        <input type="text" class="form-control" id="kd_gol" placeholder="kd_gol" name="kd_gol" value="<?php echo $kd_gol; ?>" maxlength="128">
+                                        <label for="kd_gol">Kode Golongan</label>
+                                        <input type="text" class="form-control" id="kd_gol" placeholder="Kode Golongan" name="kd_gol" value="<?php echo $kd_gol; ?>" maxlength="128">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="kd_upt">Kd UPT</label>
-                                        <input type="text" class="form-control" id="kd_upt" placeholder="kd_upt" name="kd_upt" value="<?php echo $kd_upt; ?>" maxlength="128">
+                                        <label for="kd_upt">Kode UPT</label>
+                                        <input type="text" class="form-control" id="kd_upt" placeholder="Kode UPT" name="kd_upt" value="<?php echo $kd_upt; ?>" maxlength="128">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <!--div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="keterangan">Keterangan</label>
@@ -134,36 +134,36 @@ $sts_sync = $infoPanelis->sts_sync;
                                         <input type="text" class="form-control" id="st_panelis" placeholder="st_pegawai" name="st_panelis" value="<?php echo $st_panelis; ?>" maxlength="128">
                                     </div>
                                 </div>
+                            </div-->
+
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="pangkat_tmt">Pangkat TMT</label>
+                                        <input type="date" class="form-control" id="pangkat_tmt" placeholder="Pangkat TMT" name="pangkat_tmt" value="<?php echo $pangkat_tmt; ?>" maxlength="128">
+                                    </div>
+                                </div>
+
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label for="periode_ak_tmt">Periode Ak TMT</label>
+                                        <input type="date" class="form-control" id="periode_ak_tmt" placeholder="Periode Ak TMT" name="periode_ak_tmt" value="<?php echo $periode_ak_tmt; ?>" min="1900-01-01" max="2900-12-31">
+                                    </div>
+                                </div>
                             </div>
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="pangkat_tmt">Pangkat tmt</label>
-                                        <input type="date" class="form-control" id="pangkat_tmt" placeholder="pangkat_tmt" name="pangkat_tmt" value="<?php echo $pangkat_tmt; ?>" maxlength="128">
+                                        <label for="awal_ak">Awal Ak</label>
+                                        <input type="text" class="form-control" id="awal_ak" placeholder="Awal Ak" name="awal_ak" value="<?php echo $awal_ak; ?>" maxlength="128">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="periode_ak_tmt">Periode ak tmt</label>
-                                        <input type="date" class="form-control" id="periode_ak_tmt" placeholder="periode_ak_tmt" name="periode_ak_tmt" value="<?php echo $periode_ak_tmt; ?>" maxlength="128">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="awal_ak">Awal ak</label>
-                                        <input type="text" class="form-control" id="awal_ak" placeholder="awal_ak" name="awal_ak" value="<?php echo $awal_ak; ?>" maxlength="128">
-                                    </div>
-                                </div>
-
-                                <div class="col-md-6">
-                                    <div class="form-group">
-                                        <label for="tplhr">Tplhr</label>
-                                        <input type="text" class="form-control" id="tplhr" placeholder="tplhr" name="tplhr" value="<?php echo $tplhr; ?>" maxlength="128">
+                                        <label for="tplhr">Tempat Lahir</label>
+                                        <input type="text" class="form-control" id="tplhr" placeholder="Tempat Lahir" name="tplhr" value="<?php echo $tplhr; ?>" maxlength="128">
                                     </div>
                                 </div>
                             </div>
@@ -184,7 +184,7 @@ $sts_sync = $infoPanelis->sts_sync;
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <!--div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="status">Status</label>
@@ -198,7 +198,7 @@ $sts_sync = $infoPanelis->sts_sync;
                                         <input type="text" class="form-control" id="sts_sync" placeholder="sts_sync" name="sts_sync" value="<?php echo $sts_sync; ?>" maxlength="128">
                                     </div>
                                 </div>
-                            </div>
+                            </div-->
                         </div><!-- /.box-body -->
 
                         <div class="box-footer">

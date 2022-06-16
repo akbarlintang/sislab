@@ -16,13 +16,16 @@ class Panelis_model extends CI_Model
      */
     function daftarPanelisCount($searchText = '')
     {
-        $this->db->select('BaseTbl.nip_baru, BaseTbl.nip, BaseTbl.nama, BaseTbl.alamat, BaseTbl.id_jabatan, BaseTbl.id_jenjang, BaseTbl.kd_gol, BaseTbl.kd_upt, BaseTbl.keterangan, BaseTbl.st_panelis, BaseTbl.pangkat_tmt, BaseTbl.periode_ak_tmt, BaseTbl.awal_ak, BaseTbl.tplhr, BaseTbl.tglhr, BaseTbl.tgl_berlaku, BaseTbl.status, BaseTbl.sts_sync');
+        $this->db->select('BaseTbl.panelis, BaseTbl.nip_baru, BaseTbl.nip, BaseTbl.nama, BaseTbl.alamat, BaseTbl.id_jabatan, BaseTbl.id_jenjang, BaseTbl.kd_gol, BaseTbl.kd_upt, BaseTbl.keterangan, BaseTbl.st_panelis, BaseTbl.pangkat_tmt, BaseTbl.periode_ak_tmt, BaseTbl.awal_ak, BaseTbl.tplhr, BaseTbl.tglhr, BaseTbl.tgl_berlaku, BaseTbl.status, BaseTbl.sts_sync');
         $this->db->from('tb_r_panelis as BaseTbl');
         //$this->db->join('tbl_roles as Role', 'Role.roleId = BaseTbl.roleId', 'left');
         if (!empty($searchText)) {
-            $likeCriteria = "(BaseTbl.nama  LIKE '%" . $searchText . "%'
-                            OR  BaseTbl.email  LIKE '%" . $searchText . "%'
-                            OR  BaseTbl.telepon  LIKE '%" . $searchText . "%')";
+            $likeCriteria = "(BaseTbl.panelis  LIKE '%" . $searchText . "%'
+            OR  BaseTbl.nama  LIKE '%" . $searchText . "%'
+            OR  BaseTbl.alamat  LIKE '%" . $searchText . "%'
+            OR  BaseTbl.tplhr  LIKE '%" . $searchText . "%'
+
+            )";
             $this->db->where($likeCriteria);
         }
         //$this->db->where('BaseTbl.isDeleted', 0);
@@ -117,7 +120,7 @@ class Panelis_model extends CI_Model
      */
     function getinfoPanelis($nip_baru)
     {
-        $this->db->select('nip_baru, nip, nama, panelis, alamat, id_jabatan, id_jenjang, kd_gol, kd_upt, keterangan, st_panelis, pangkat_tmt, periode_ak_tmt, awal_ak, tplhr, tglhr, tgl_berlaku, status, sts_sync');
+        $this->db->select ('*');
         $this->db->from('tb_r_panelis');
         // $this->db->where('isDeleted', 0);
         // $this->db->where('roleId !=', 1);

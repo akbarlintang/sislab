@@ -100,21 +100,21 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="kd_gol">Kd Gol</label>
+                                        <label for="kd_gol">Kode Gol</label>
                                         <input type="text" class="form-control" id="kd_gol" placeholder="Kode Golongan" name="kd_gol" value="<?php echo set_value('kd_gol'); ?>" maxlength="128">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="kd_upt">Kd UPT</label>
+                                        <label for="kd_upt">Kode UPT</label>
                                         <input type="text" class="form-control" id="kd_upt" placeholder="Kode UPT" name="kd_upt" value="<?php echo set_value('kd_upt'); ?>" maxlength="128">
                                     </div>
                                 </div>
                             </div>
 
-                            <div class="row">
-                                <div class="col-md-6">
+                            <!--<div class="row">
+                                <div class="col-md-12">
                                     <div class="form-group">
                                         <label for="keterangan">Keterangan</label>
                                         <input type="text" class="form-control" id="keterangan" placeholder="keterangan" name="keterangan" value="<?php echo set_value('keterangan'); ?>" maxlength="128">
@@ -127,20 +127,20 @@
                                         <input type="text" class="form-control" id="st_panelis" placeholder="st_panelis" name="st_panelis" value="<?php echo set_value('st_panelis'); ?>" maxlength="128">
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
 
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="pangkat_tmt">Pangkat tmt</label>
-                                        <input type="date" class="form-control" id="pangkat_tmt" placeholder="pangkat_tmt" name="pangkat_tmt" value="<?php echo set_value('pangkat_tmt'); ?>" maxlength="128">
+                                        <label for="pangkat_tmt">Pangkat TMT</label>
+                                        <input type="date" class="form-control" id="pangkat_tmt" placeholder="Pangkat TMT" name="pangkat_tmt" value="<?php echo set_value('pangkat_tmt'); ?>" maxlength="128">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="periode_ak_tmt">Periode ak tmt</label>
-                                        <input type="date" class="form-control" id="periode_ak_tmt" placeholder="periode_ak_tmt" name="periode_ak_tmt" value="<?php echo set_value('periode_ak_tmt'); ?>" maxlength="128">
+                                        <label for="periode_ak_tmt">Periode Ak TMT</label>
+                                        <input type="date" class="form-control" id="periode_ak_tmt" placeholder="Periode Ak TMT" name="periode_ak_tmt" value="<?php echo set_value('periode_ak_tmt'); ?>" maxlength="128">
                                     </div>
                                 </div>
                             </div>
@@ -149,14 +149,14 @@
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="awal_ak">Awal ak</label>
-                                        <input type="text" class="form-control" id="awal_ak" placeholder="awal_ak" name="awal_ak" value="<?php echo set_value('awal_ak'); ?>" maxlength="128">
+                                        <input type="text" class="form-control" id="awal_ak" placeholder="Awal Ak" name="awal_ak" value="<?php echo set_value('awal_ak'); ?>" maxlength="128">
                                     </div>
                                 </div>
 
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="tplhr">Tplhr</label>
-                                        <input type="text" class="form-control" id="tplhr" placeholder="tplhr" name="tplhr" value="<?php echo set_value('tplhr'); ?>" maxlength="128">
+                                        <label for="tplhr">Tempat Lahir</label>
+                                        <input type="text" class="form-control" id="tplhr" placeholder="Tempat Lahir" name="tplhr" value="<?php echo set_value('tplhr'); ?>" maxlength="128">
                                     </div>
                                 </div>
                             </div>
@@ -164,8 +164,8 @@
                             <div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
-                                        <label for="tglhr">Tglhr</label>
-                                        <input type="date" class="form-control" id="tglhr" placeholder="tglhr" name="tglhr" value="<?php echo set_value('tglhr'); ?>" maxlength="128">
+                                        <label for="tglhr">Tanggal Lahir</label>
+                                        <input type="date" class="form-control" id="tglhr" placeholder="Tanggal Lahir" name="tglhr" value="<?php echo set_value('tglhr'); ?>" maxlength="128">
                                     </div>
                                 </div>
 
@@ -177,7 +177,7 @@
                                 </div>
                             </div>
 
-                            <div class="row">
+                            <!--<div class="row">
                                 <div class="col-md-6">
                                     <div class="form-group">
                                         <label for="status">Status</label>
@@ -191,7 +191,7 @@
                                         <input type="text" class="form-control" id="sts_sync" placeholder="sts_sync" name="sts_sync" value="<?php echo set_value('sts_sync'); ?>" maxlength="128">
                                     </div>
                                 </div>
-                            </div>
+                            </div>-->
                         </div><!-- /.box-body -->
 
                         <div class="box-footer">
